@@ -7,15 +7,18 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href \"https://noaccount1.github.io/\" & npx angular-cli-ghpages --dir=dist/github-root --branch=gh-pages --repo=\"https://github.com/NoAccount1/noaccount1.github.io.git\""
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.9",
+    "@angular/cdk": "^11.1.1",
     "@angular/common": "~11.0.9",
     "@angular/compiler": "~11.0.9",
     "@angular/core": "~11.0.9",
     "@angular/forms": "~11.0.9",
+    "@angular/material": "^11.1.1",
     "@angular/platform-browser": "~11.0.9",
     "@angular/platform-browser-dynamic": "~11.0.9",
     "@angular/router": "~11.0.9",
@@ -29,6 +32,7 @@
     "@angular/compiler-cli": "~11.0.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
