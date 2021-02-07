@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GAMES, Game } from '../games';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-game',
@@ -13,13 +14,16 @@ export class GameComponent implements OnInit {
   @Input() view: any;
 
   constructor(
-    public activatedRoute: ActivatedRoute
+    public activatedRoute: ActivatedRoute,
+    public _location: Location // tslint:disable-line: variable-name
   ) {}
 
   gameUrl = this.activatedRoute.snapshot.params.game;
+  backPage = () => {
+    this._location.back();
+  }
 
-  // tslint:disable-next-line: typedef
-  ngOnInit() {
+  ngOnInit() {  // tslint:disable-line: typedef
     if (this.view !== 'item') {
       this.view = 'full';
     }

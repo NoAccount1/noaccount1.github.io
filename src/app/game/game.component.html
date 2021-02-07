@@ -14,17 +14,23 @@
       <a target="_blank" *ngIf="mainGame.legalUrls.epicGames" href="{{mainGame.legalUrls.epicGames}}"><i class="fa fa-epic-games"></i></a>
     </div>
   </div>
-  <footer>
-    <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
-    <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
-  </footer>
+  <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
+  <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
 </div>
 
-<div class="card-full" *ngIf="view === 'full'">
-  <div class="img"><img src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}" width="256px" height="256px"></div>
-  <div class="content">
-    <h1>{{mainGame.name}}</h1>
-    <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
-    <p>{{mainGame.shortDesc}}</p>
+<div class="container" *ngIf="view === 'full'">
+  <button class="back-button" (click)="backPage()">
+    <i class="material-icons md-24">navigate_before</i>
+    <p>Retour</p>
+  </button>
+  <div class="card-full">
+    <div class="img"><img src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}" width="256px" height="256px"></div>
+    <div class="content">
+      <h1>{{mainGame.name}}</h1>
+      <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
+      <p>{{mainGame.shortDesc}}</p>
+      <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
+    <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
+    </div>
   </div>
 </div>

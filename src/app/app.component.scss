@@ -1,14 +1,15 @@
 header {
   nav {
-    border-radius: 50px;
+    border-radius: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    max-height: 46px;
     a {
       background-color: #333;
-      border-radius: 50px;
+      border-radius: 0px;
       float: left;
       display: block;
       color: white;
@@ -26,6 +27,9 @@ header {
       }
       &:hover {
         background-color: #111;
+      }
+      &.fa-icon {
+        padding: 14px 0px
       }
     }
   }

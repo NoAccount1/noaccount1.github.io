@@ -7,9 +7,11 @@ import { GameComponent } from './game/game.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent, pathMatch: 'full' },
     { path: 'games', component: GameListComponent },
-    { path: 'games/:game', component: GameComponent }
+    { path: 'games/:game', component: GameComponent },
+    { path: 'error', component: ErrorComponent },
+    { path: '**', redirectTo: '/error' }
 ];
 
 @NgModule({

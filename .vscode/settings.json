@@ -8,8 +8,5 @@
     "**/.history": true,
     "**/.tmp.drivedownload": true
   },
-  "explorerExclude.backup": null,
-  "conventionalCommits.scopes": [
-    "First release"
-  ]
+  "explorerExclude.backup": null
 }
