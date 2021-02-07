@@ -1,0 +1,35 @@
+header {
+  nav {
+    border-radius: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    a {
+      background-color: #333;
+      border-radius: 50px;
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      &.left {
+        float: left;
+      }
+      &.right {
+        float: right;
+      }
+      &.active {
+        background-color: #000
+      }
+      &:hover {
+        background-color: #111;
+      }
+    }
+  }
+}
+main.container {
+  margin: 20px;
+}

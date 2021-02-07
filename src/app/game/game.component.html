@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<div class="card" *ngIf="view === 'item'">
+  <div>
+    <img class="game-icon" src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}">
+    <h1>{{mainGame.name}}</h1>
+    <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
+    <p>{{mainGame.shortDesc}}</p>
+  </div>
+  <div>
+    <div id="url" *ngIf="mainGame.legalUrls">
+      <a target="_blank" *ngIf="mainGame.legalUrls.steam" href="{{mainGame.legalUrls.steam}}"><i class="fab fa-steam"></i></a>
+      <a target="_blank" *ngIf="mainGame.legalUrls.gog" href="{{mainGame.legalUrls.gog}}"><i class="fa fa-gog"></i></a>
+      <a target="_blank" *ngIf="mainGame.legalUrls.origin" href="{{mainGame.legalUrls.origin}}"><i class="fa fa-origin"></i></a>
+      <a target="_blank" *ngIf="mainGame.legalUrls.epicGames" href="{{mainGame.legalUrls.epicGames}}"><i class="fa fa-epic-games"></i></a>
+    </div>
+  </div>
+  <footer>
+    <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
+    <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
+  </footer>
+</div>
+
+<div class="card-full" *ngIf="view === 'full'">
+  <div class="img"><img src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}" width="256px" height="256px"></div>
+  <div class="content">
+    <h1>{{mainGame.name}}</h1>
+    <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
+    <p>{{mainGame.shortDesc}}</p>
+  </div>
+</div>

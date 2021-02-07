@@ -1,0 +1,8 @@
+<h1>Jeux disponibles</h1>
+<div class="game-container">
+  <div>
+    <a href="games/{{mainGame.routeUrl}}" *ngFor="let mainGame of gameList">
+      <app-game [mainGame]="mainGame" [view]="'item'"></app-game>
+    </a>
+  </div>
+</div>
