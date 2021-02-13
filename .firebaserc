@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cracked-games": {
+      "hosting": {
+        "app": [
+          "cracked-games"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cracked-games"
+  }
+}

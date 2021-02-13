@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingRoutes } from './app-routing.routes';
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
+import { GameComponent } from './games/game/game.component';
 import { HomeComponent } from './home/home.component';
-import { GameListComponent } from './game-list/game-list.component';
+import { GameListComponent } from './games/games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorComponent } from './error/error.component';
 
@@ -19,7 +19,7 @@ import { ErrorComponent } from './error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingRoutes,
     BrowserAnimationsModule,
   ],
   providers: [],

@@ -33,6 +33,8 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
+/.github
+/.firebase
 /.src
 /.sass-cache
 /connect.lock

@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href=https://noaccount1.github.io/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href \"https://noaccount1.github.io/\" | npx angular-cli-ghpages --dir=dist/github-root --branch=gh-pages --repo=\"https://github.com/NoAccount1/\""
+    "deploy": "npx angular-cli-ghpages --dir=dist/github-root --branch=gh-pages --repo=https://github.com/NoAccount1/noaccount1.github.io"
   },
   "private": true,
   "dependencies": {
@@ -16,10 +16,12 @@
     "@angular/common": "~11.0.9",
     "@angular/compiler": "~11.0.9",
     "@angular/core": "~11.0.9",
+    "@angular/fire": "^6.1.4",
     "@angular/forms": "~11.0.9",
     "@angular/platform-browser": "~11.0.9",
     "@angular/platform-browser-dynamic": "~11.0.9",
     "@angular/router": "~11.0.9",
+    "firebase": "^8.2.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -41,6 +43,12 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "@angular-devkit/architect": ">= 0.900 < 0.1200",
+    "firebase-tools": "^8.0.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1",
+    "open": "^7.0.3"
   }
 }

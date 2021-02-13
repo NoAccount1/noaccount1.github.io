@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GameListComponent } from './game-list/game-list.component';
+import { GameListComponent } from './games/games.component';
 import { HomeComponent } from './home/home.component';
-import { GameComponent } from './game/game.component';
+import { GameComponent } from './games/game/game.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingRoutes { }
