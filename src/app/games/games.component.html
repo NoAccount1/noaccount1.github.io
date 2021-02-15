@@ -1,7 +1,27 @@
 <h1>Jeux disponibles</h1>
-<div class="game-container">
-  <div>
-    <a href="games/{{mainGame.routeUrl}}" *ngFor="let mainGame of gameList">
+<button mat-raised-button color="primary">{{'Trier par ' + sort.name | uppercase}}<mat-icon class="mat-24">arrow_downward</mat-icon> </button>
+
+<!-- <mat-card>
+    <mat-card-header>
+        <img matCardAvatar src="../../assets/icons/celeste.png">
+        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <img matCardImage src="../../assets/icons/amongUs.png">
+    <mat-card-content>
+      <mat-card-title>Title</mat-card-title>
+        Text content
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button>Action1</button>
+        <button mat-button>Action2</button>
+    </mat-card-actions>
+    <mat-card-footer>
+        Footer
+    </mat-card-footer>
+</mat-card> -->
+<div class="games-container">
+  <div class="games">
+    <a routerLink="games/{{mainGame.routeUrl}}" *ngFor="let mainGame of gameList">
       <app-game [mainGame]="mainGame" [view]="'item'"></app-game>
     </a>
   </div>

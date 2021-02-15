@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<div class="card" *ngIf="view === 'item'">
+<!-- <div class="card" *ngIf="view === 'item'">
   <div>
     <img class="game-icon" src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}">
     <h1>{{mainGame.name}}</h1>
@@ -16,7 +15,21 @@
   </div>
   <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
   <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
-</div>
+</div> -->
+<mat-card *ngIf="view === 'item'">
+  <img matCardImage src="{{mainGame.imgPath}}">
+  <mat-card-header>
+    <mat-card-title>{{mainGame.name}}</mat-card-title>
+    <mat-card-subtitle>{{mainGame.version}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{mainGame.shortDesc}}
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <!-- <button mat-button>Download from Mega.nz</button> -->
+    <a href="{{mainGame.megaUrl}}" mat-raised-button color="primary">Download from Mega.nz</a>
+  </mat-card-actions>
+</mat-card>
 
 <div class="container" *ngIf="view === 'full'">
   <button class="back-button" (click)="backPage()">

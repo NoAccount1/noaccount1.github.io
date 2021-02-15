@@ -1,0 +1,40 @@
+/*
+@function var ($color) {
+  @if $color == red {
+    $primary: #d50000;
+    $p-light: #ff5131;
+    $p-dark: #9b0000;
+    $p-text: #ffffff;
+  } @else if $color == grey {
+    $primary: #333333;
+    $p-light: #5c5c5c;
+    $p-dark: #0c0c0c;
+    $p-text: #ffffff;
+  } @else if $color == blue{
+    $primary: #3d5afe;
+    $p-light:#8187ff;
+    $p-dark: #0031ca;
+    $p-text: #ffffff;
+  } @else {
+    $primary: #3d5afe;
+    $p-light:#8187ff;
+    $p-dark: #0031ca;
+    $p-text: #ffffff;
+  }
+} //*/
+// Theme
+$primary: #6200ee;
+$p-dark: #3700b3;
+$secondary: #03dac5;
+
+// Others
+$bg: #ffffff;
+$surface: #ffffff;
+$error: #b00020;
+
+// Text colors
+$on-primary: #ffffff;
+$on-secondary: #000000;
+$on-surface: #000000;
+$on-bg: #000000;
+$on-error: #ffffff;

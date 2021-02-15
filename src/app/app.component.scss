@@ -1,39 +1,44 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+/* @import '/src/app/theme.scss';
+
 header {
-  nav {
-    border-radius: 10px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  position: static;
+  mat-toolbar span {
     overflow: hidden;
-    background-color: #333;
-    max-height: 46px;
-    a {
-      background-color: #333;
-      border-radius: 0px;
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      &.left {
-        float: left;
-      }
-      &.right {
-        float: right;
-      }
-      &.active {
-        background-color: #000
-      }
-      &:hover {
-        background-color: #111;
-      }
-      &.fa-icon {
-        padding: 14px 0px
-      }
+    padding: 10px;
+    font-size: 18px;
+    &.title {
+      font-size: 20px;
     }
   }
 }
+
 main.container {
-  margin: 20px;
+  overflow: auto;
+  width: 95vh;
+  align-self: center;
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    margin: 10px;
+  }
+  // ::-webkit-scrollbar-button { 2 }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+  // ::-webkit-scrollbar-track-piece { 4 }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    width: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+  // ::-webkit-scrollbar-corner { 6 }
+  // ::-webkit-resizer { 7 }
 }
+ */

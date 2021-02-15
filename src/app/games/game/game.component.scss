@@ -1,4 +1,35 @@
-div.card {
+mat-card {
+  text-decoration: none;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  min-height: 380px;
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+  img[matCardImage] {
+    margin: 10px;
+    width: 90%;
+  }
+  mat-card-header {
+    mat-card-title {
+      text-align: center;
+    }
+    mat-card-subtitle {
+      text-align: center;
+    }
+  }
+  // mat-card-content {}
+  mat-card-actions {
+    a {
+      width: 100%;
+      // &[mat-button] {}
+      // &[mat-raised-button] {}
+    }
+  }
+}
+
+.card {
   text-decoration: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   max-width: 300px;

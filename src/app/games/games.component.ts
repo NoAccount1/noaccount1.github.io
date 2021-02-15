@@ -8,9 +8,16 @@ import { GAMES } from '../games';
   styleUrls: ['./games.component.scss']
 })
 
-export class GameListComponent implements OnInit {
+export class GamesComponent implements OnInit {
 
+  sort: { name: string, id: number } = { name: 'nom', id: 1 };
   gameList = GAMES;
+  showMenu = () => {
+    console.log('Montres moi le menu');
+  }
+  switchOrder = () => {
+    console.log('Change l\'ordre');
+  }
 
   constructor() { }
 
