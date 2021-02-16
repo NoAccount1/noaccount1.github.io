@@ -4,11 +4,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=https://noaccount1.github.io/",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npx angular-cli-ghpages --dir=dist/github-root --branch=gh-pages --repo=https://github.com/NoAccount1/noaccount1.github.io"
+    "firebase": "ng build --prod && firebase deploy",
+      "deploy -f": "firebase deploy",
+      "deploy --firebase": "firebase deploy",
+    "gh-pages": "ng build --prod && npx angular-cli-ghpages --dir=dist --branch=gh-pages --repo=https://github.com/NoAccount1/noaccount1.github.io",
+      "deploy -g": "npx angular-cli-ghpages --dir=dist --branch=gh-pages --repo=https://github.com/NoAccount1/noaccount1.github.io",
+      "deploy --gh-pages": "npx angular-cli-ghpages --dir=dist --branch=gh-pages --repo=https://github.com/NoAccount1/noaccount1.github.io"
   },
   "private": true,
   "dependencies": {

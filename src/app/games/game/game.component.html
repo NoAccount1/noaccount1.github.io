@@ -26,8 +26,8 @@
     {{mainGame.shortDesc}}
   </mat-card-content>
   <mat-card-actions align="end">
-    <!-- <button mat-button>Download from Mega.nz</button> -->
-    <a href="{{mainGame.megaUrl}}" mat-raised-button color="primary">Download from Mega.nz</a>
+    <a href="{{mainGame.megaUrl}}" mat-raised-button color="primary" *ngIf="mainGame.megaUrl">Download from Mega.nz</a>
+    <a mat-raised-button color="primary" *ngIf="!mainGame.megaUrl" disabled>Download link unavailable</a>
   </mat-card-actions>
 </mat-card>
 
