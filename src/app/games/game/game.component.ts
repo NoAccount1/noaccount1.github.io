@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class GameComponent implements OnInit {
 
-  @Input('mainGame') mainGame: any; // tslint:disable-line: no-input-rename
+  @Input() mainGame: any;
   @Input() view: any;
 
   constructor(
@@ -23,7 +23,7 @@ export class GameComponent implements OnInit {
     this._location.back();
   }
 
-  ngOnInit() {  // tslint:disable-line: typedef
+  ngOnInit(): void {
     if (this.view !== 'item') {
       this.view = 'full';
     }

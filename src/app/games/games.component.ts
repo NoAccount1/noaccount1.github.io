@@ -9,15 +9,9 @@ import { GAMES } from '../games';
 })
 
 export class GamesComponent implements OnInit {
-
   sort: { name: string, id: number } = { name: 'nom', id: 1 };
   gameList = GAMES;
-  showMenu = () => {
-    console.log('Montres moi le menu');
-  }
-  switchOrder = () => {
-    console.log('Change l\'ordre');
-  }
+  pageTitle = 'Liste des jeux';
 
   constructor() { }
 

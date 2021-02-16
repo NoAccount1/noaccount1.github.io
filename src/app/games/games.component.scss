@@ -1,15 +1,5 @@
-@import "/src/app/theme.scss";
-
-button.sort {
-  float: right;
-  cursor: pointer;
-  background-color: $p-dark;
-  border: none;
-  border-radius: 5px;
-  flex-direction: row-reverse;
-  font-weight: bold;
-}
 .games-container {
+  overflow: auto;
   display: flex;
   flex-direction: row;
   ::-webkit-scrollbar {
