@@ -3,8 +3,9 @@
   <mat-sidenav #sidenav fxHide fxShow.gt-sm>
     <mat-nav-list style="width: 300px;">
       <mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></mat-list-item>
-      <a mat-list-item [routerLink]="'/games'"> Jeux </a>
-      <a mat-list-item href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank">Github repository</a>
+      <a mat-list-item [routerLink]="['/']" (click)="sidenav.toggle()"> Accueil </a>
+      <a mat-list-item [routerLink]="['/games']" (click)="sidenav.toggle()"> Jeux </a>
+      <a mat-list-item href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank" (click)="sidenav.toggle()">Github repository</a>
       <!-- <a mat-list-item [routerLink]="'/contacts'"> Contacts </a>
       <a mat-list-item [routerLink]="'/create-contact'"> Create Contact </a>
       <a mat-list-item [routerLink]="'/activities'"> Activities </a>
@@ -16,12 +17,14 @@
     <mat-toolbar color="primary">
       <mat-toolbar-row>
         <button mat-icon-button fxHide fxShow.gt-sm><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
-        <a mat-button [routerLink]="'/'" style="font-size: 20px;">SimpleCRM</a>
+        <a mat-button [routerLink]="['/']" style="font-size: 20px;">SimpleCRM</a>
+
         <span class="menu-spacer"></span>
-        <div>
-          <a mat-button [routerLink]="'/games'"> Jeux </a>
-          <a mat-icon-button href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank"> <i class="fab fa-github" style="color: white; font-size: 20px;"></i> </a>
-        </div>
+        <a mat-button [routerLink]="['/games']"> Jeux </a>
+
+        <span class="menu-spacer"></span>
+        <a mat-icon-button href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank"> <i class="fab fa-github" style="color: white; font-size: 20px;"></i> </a>
+
       </mat-toolbar-row>
       <mat-toolbar-row *ngIf="pageTitle">
           <span style="font-size: 18px;">{{pageTitle}}</span>

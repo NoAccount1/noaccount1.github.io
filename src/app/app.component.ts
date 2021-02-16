@@ -14,7 +14,7 @@ import { ErrorComponent } from './error/error.component';
 })
 
 export class AppComponent implements OnInit, AfterViewChecked {
-  @ViewChild(GamesComponent) games: GamesComponent;
+  @ViewChild(GamesComponent) games: GamesComponent | any;
 
   title = 'github-root';
   mobile = false;

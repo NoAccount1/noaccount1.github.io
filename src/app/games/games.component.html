@@ -2,7 +2,7 @@
 <button mat-raised-button color="primary">{{'Trier par ' + sort.name | uppercase}}<mat-icon class="mat-16">arrow_downward</mat-icon> </button>
 <div class="games-container">
   <div class="games">
-    <a routerLink="games/{{mainGame.routeUrl}}" *ngFor="let mainGame of gameList">
+    <a (click)="goto(mainGame.routeUrl)" *ngFor="let mainGame of gameList">
       <app-game [mainGame]="mainGame" [view]="'item'"></app-game>
     </a>
   </div>
