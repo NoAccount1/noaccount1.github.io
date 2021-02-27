@@ -10,16 +10,52 @@ import { GAMES } from '../games';
 })
 
 export class GamesComponent implements OnInit {
-  sort: { name: string, id: number } = { name: 'nom', id: 1 };
+
+  constructor(private router: Router) {
+  }
   gameList = GAMES;
   pageTitle = 'Liste des jeux';
+  arrowWay = 'upward';
+  way = 'up';
+
   goto = (url: string) => {
     this.router.navigate(['/games', url]);
   }
+  sort = () => {
+    if (this.way === 'up') {
+      this.way = 'down';
+      this.arrowWay = 'downward';
+      this.gameList.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
 
-  constructor(private router: Router) { }
+        // names must be equal
+        return 0;
+      });
+    } else if (this.way === 'down') {
+      this.way = 'up';
+      this.arrowWay = 'upward';
+      this.gameList.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA > nameB) {
+          return -1;
+        }
+        if (nameA < nameB) {
+          return 1;
+        }
 
-  ngOnInit(): void {
+        // names must be equal
+        return 0;
+      });
+    }
   }
 
+  ngOnInit(): void { this.sort(); }
 }

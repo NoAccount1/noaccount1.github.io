@@ -1,39 +1,27 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZltT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 <mat-sidenav-container>
-  <mat-sidenav #sidenav fxHide fxShow.gt-sm>
+  <mat-sidenav #sidenav>
     <mat-nav-list style="width: 300px;">
       <mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></mat-list-item>
       <a mat-list-item [routerLink]="['/']" (click)="sidenav.toggle()"> Accueil </a>
       <a mat-list-item [routerLink]="['/games']" (click)="sidenav.toggle()"> Jeux </a>
       <a mat-list-item href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank" (click)="sidenav.toggle()">Github repository</a>
-      <!-- <a mat-list-item [routerLink]="'/contacts'"> Contacts </a>
-      <a mat-list-item [routerLink]="'/create-contact'"> Create Contact </a>
-      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
-      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a> -->
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <button mat-icon-button fxHide fxShow.gt-sm><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
-        <a mat-button [routerLink]="['/']" style="font-size: 20px;">SimpleCRM</a>
-
-        <span class="menu-spacer"></span>
-        <a mat-button [routerLink]="['/games']"> Jeux </a>
+        <button mat-icon-button fxHide="true" fxShow.lt-sm><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
+        <a mat-button [routerLink]="['/']" style="font-size: 20px;"><mat-icon>games</mat-icon> Cracked Games</a>
+        <div fxHide.lt-sm>
+          <a mat-button [routerLink]="['/games']"> Jeux </a></div>
 
         <span class="menu-spacer"></span>
         <a mat-icon-button href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank"> <i class="fab fa-github" style="color: white; font-size: 20px;"></i> </a>
 
       </mat-toolbar-row>
-      <mat-toolbar-row *ngIf="pageTitle">
-          <span style="font-size: 18px;">{{pageTitle}}</span>
-        </mat-toolbar-row>
     </mat-toolbar>
-    <div style="padding: 0 37px; height: calc(100vh - 128px)" *ngIf="pageTitle">
-      <router-outlet></router-outlet>
-    </div>
-    <div style="padding: 0 37px; height: calc(100vh - 64px)" *ngIf="!pageTitle">
+    <div style="height: calc(100vh - 64px)">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

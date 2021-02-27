@@ -1,22 +1,4 @@
-<!-- <div class="card" *ngIf="view === 'item'">
-  <div>
-    <img class="game-icon" src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}">
-    <h1>{{mainGame.name}}</h1>
-    <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
-    <p>{{mainGame.shortDesc}}</p>
-  </div>
-  <div>
-    <div id="url" *ngIf="mainGame.legalUrls">
-      <a target="_blank" *ngIf="mainGame.legalUrls.steam" href="{{mainGame.legalUrls.steam}}"><i class="fab fa-steam"></i></a>
-      <a target="_blank" *ngIf="mainGame.legalUrls.gog" href="{{mainGame.legalUrls.gog}}"><i class="fa fa-gog"></i></a>
-      <a target="_blank" *ngIf="mainGame.legalUrls.origin" href="{{mainGame.legalUrls.origin}}"><i class="fa fa-origin"></i></a>
-      <a target="_blank" *ngIf="mainGame.legalUrls.epicGames" href="{{mainGame.legalUrls.epicGames}}"><i class="fa fa-epic-games"></i></a>
-    </div>
-  </div>
-  <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
-  <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
-</div> -->
-<mat-card *ngIf="view === 'item'">
+<mat-card *ngIf="view === 'item'" item>
   <img matCardImage src="{{mainGame.imgPath}}">
   <mat-card-header>
     <mat-card-title>{{mainGame.name}}</mat-card-title>
@@ -26,24 +8,22 @@
     {{mainGame.shortDesc}}
   </mat-card-content>
   <mat-card-actions align="end">
-    <a href="{{mainGame.megaUrl}}" mat-raised-button color="primary" *ngIf="mainGame.megaUrl">Download from Mega.nz</a>
+    <a mat-raised-button color="primary" *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}">Download from Mega.nz</a>
     <a mat-raised-button color="primary" *ngIf="!mainGame.megaUrl" disabled>Download link unavailable</a>
   </mat-card-actions>
 </mat-card>
 
-<div class="container" *ngIf="view === 'full'">
-  <button class="back-button" (click)="backPage()">
-    <i class="material-icons md-24">navigate_before</i>
-    <p>Retour</p>
-  </button>
-  <div class="card-full">
-    <div class="img"><img src="{{mainGame.imgPath}}" alt="{{mainGame.imgAlt}}" width="256px" height="256px"></div>
-    <div class="content">
-      <h1>{{mainGame.name}}</h1>
-      <p class="title" *ngIf="mainGame.version">Version : {{mainGame.version}}</p>
-      <p>{{mainGame.shortDesc}}</p>
-      <a *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}" class="megaUrl"><button class="megaBtn">Download from Mega</button></a>
-    <a *ngIf="!mainGame.megaUrl" class="megaUrl"><button class="megaBtn-disabled">No Mega URL</button></a>
-    </div>
-  </div>
-</div>
+<mat-card *ngIf="view === 'full'" full>
+  <img matCardImage src="{{mainGame.imgPath}}">
+  <mat-card-header>
+    <mat-card-title>{{mainGame.name}}</mat-card-title>
+    <mat-card-subtitle>{{mainGame.version}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{mainGame.shortDesc}}
+  </mat-card-content>
+  <mat-card-actions align="start">
+    <a mat-raised-button color="primary" *ngIf="mainGame.megaUrl" href="{{mainGame.megaUrl}}">Download from Mega.nz</a>
+    <a mat-raised-button color="primary" *ngIf="!mainGame.megaUrl" disabled>Download link unavailable</a>
+  </mat-card-actions>
+</mat-card>

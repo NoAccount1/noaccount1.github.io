@@ -1,6 +1,4 @@
 export interface Game {
-  // TODO: Add official price
-  // TODO: Add publication date
   name: string;
   shortDesc: string;
   description?: string;
@@ -82,5 +80,13 @@ export const GAMES: Game[] = [
       epicGames: 'https://www.epicgames.com/store/en-US/product/celeste/home'
     },
     imgPath: 'assets/icons/celeste.png'
+  },
+  {
+    name: 'Katana ZERO',
+    shortDesc: 'Un jeu en deux dimension où vous incarnez un assassin ninja dans la banlieue d\'une grande ville',
+    megaUrl: null,
+    legalUrls: {},
+    imgPath: 'assets/icons/katana-zero.png',
+    routeUrl: 'katana-zero'
   }
 ];

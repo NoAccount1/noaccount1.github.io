@@ -7,18 +7,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +33,10 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }

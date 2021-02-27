@@ -1,6 +1,6 @@
-mat-card {
+mat-card[item] {
   text-decoration: none;
-  width: 300px;
+  max-width: 280px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   min-height: 380px;
@@ -29,7 +29,20 @@ mat-card {
   }
 }
 
-.card {
+mat-card[full] {
+  margin: 37px 37px 0 0;
+  width: 100%;
+  text-align: center;
+  img[matCardImage] {
+    width: 300px;
+    text-align: start;
+  }
+  a[mat-raised-button] {
+    width: 100%;
+  }
+}
+
+/* .card {
   text-decoration: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   max-width: 300px;
@@ -93,9 +106,9 @@ mat-card {
       opacity: 0.7;
     }
   }
-}
+} */
 
-div.container {
+/* div.container {
   button.back-button {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -165,4 +178,4 @@ div.container {
       }
     }
   }
-}
+} */

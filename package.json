@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "deploy": "echo No argument provided",
     "firebase": "ng build --prod && firebase deploy",
       "deploy -f": "firebase deploy",
       "deploy --firebase": "firebase deploy",
