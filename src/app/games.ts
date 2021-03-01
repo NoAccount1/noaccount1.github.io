@@ -16,7 +16,7 @@ export interface Game {
   imgAlt?: string;
   imgPath: string;
 }
-
+export const GAMES_JSON: Game[] = require('../assets/games.json')
 export const GAMES: Game[] = [
   {
     name: 'STAR WARS Battlefront I (classic 2004)',

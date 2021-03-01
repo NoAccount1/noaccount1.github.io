@@ -1,10 +1,11 @@
 <mat-paginator [length]="gameList.length" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 <button mat-raised-button color="primary" (click)="sort()">{{'Trier par nom' | uppercase}}<mat-icon class="mat-16">arrow_{{arrowWay}}</mat-icon> </button>
-<div games><!--  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="space-evenly none" -->
+<div games fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start"><!--  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="space-evenly none" -->
     <a (click)="goto(mainGame.routeUrl)" *ngFor="let mainGame of gameList"><!--  fxFlex="25%" -->
       <app-game
         [mainGame]="mainGame"
         [view]="'item'"
+        fxFlex="1 0 auto"
       ></app-game>
     </a>
 </div>

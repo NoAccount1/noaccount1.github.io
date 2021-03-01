@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GamesComponent } from './games/games.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './games/game/game.component';
-import { ErrorComponent } from './error/error.component';
+import { ErrorComponent } from './common/error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },

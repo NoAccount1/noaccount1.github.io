@@ -1,4 +1,10 @@
 mat-card[item] {
+  img[matCardImage] {
+    width: 180px;
+  }
+}
+
+/* mat-card[item] {
   text-decoration: none;
   max-width: 280px;
   text-align: center;
@@ -27,7 +33,7 @@ mat-card[item] {
       // &[mat-raised-button] {}
     }
   }
-}
+} */
 
 mat-card[full] {
   margin: 37px 37px 0 0;
@@ -41,141 +47,3 @@ mat-card[full] {
     width: 100%;
   }
 }
-
-/* .card {
-  text-decoration: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  max-width: 300px;
-  min-height: 380px;
-  text-align: center;
-  margin: 10px;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 10px;
-  color: black;
-  font-size: 18px;
-  h1 {
-    font-size: 22px;
-  }
-  p {
-    font-size: 15px;
-    color: black;
-    padding-left: 10px;
-    padding-right: 10px;
-    &.title {
-      color: grey;
-      font-size: 18px;
-    }
-  }
-  img.game-icon {
-    margin: 10px;
-    width: 50%;
-  }
-  button {
-    overflow: auto;
-    vertical-align: bottom;
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    margin: 4px;
-    margin-bottom: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 95%;
-    font-size: 18px;
-    border-radius: 10px;
-    &.megaBtn {
-      background-color: rgba(220, 0, 0, 104);
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    &.megaBtn-disabled {
-      cursor: not-allowed;
-      background-color: #000;
-    }
-  }
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-} */
-
-/* div.container {
-  button.back-button {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    background-color: black;
-    padding-left: 5px;
-    cursor: pointer;
-    color: white;
-    text-align: left;
-    border: 3px solid #000;
-    border-bottom: 0px;
-    width: 120px;
-    &:hover {
-      background-color: #1f1f1f
-    }
-    i {
-      display: inline-block;
-    }
-    p {
-      display: inline-block;
-      vertical-align: 7px;
-    }
-  }
-  div.card-full {
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-    border: 3px solid #000;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-    .img {
-      display: inline-block;
-      margin: 10px;
-      margin-bottom: 7px !important;
-    }
-    .content {
-      vertical-align: top;
-      display: inline-block;
-      p.title {
-        color: grey;
-        font-size: 18px;
-      }
-      button {
-        overflow: auto;
-        vertical-align: bottom;
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        margin: 4px;
-        margin-bottom: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 95%;
-        font-size: 18px;
-        border-radius: 10px;
-        &.megaBtn {
-          background-color: rgba(220, 0, 0, 104);
-          &:hover {
-            opacity: 0.7;
-          }
-        }
-        &.megaBtn-disabled {
-          cursor: not-allowed;
-          background-color: #000;
-        }
-      }
-    }
-  }
-} */
