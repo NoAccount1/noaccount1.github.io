@@ -4,14 +4,14 @@ import { GAMES } from '../../games';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  selector: 'app-item',
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.scss']
 })
-export class GameComponent implements OnInit {
+export class ItemComponent implements OnInit {
 
   @Input() mainGame: any;
-  @Input() view: any;
+  @Input() fullView: boolean | undefined;
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -24,8 +24,8 @@ export class GameComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.view !== 'item') {
-      this.view = 'full';
+    if (this.fullView !== false) {
+      this.fullView = true;
     }
     const gameList = GAMES;
     const gameUrl: string = this.activatedRoute.snapshot.params.game;

@@ -4,24 +4,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-/* Import the components files */
-import { AppComponent } from './app.component';
-import { GamesComponent } from './games/games.component';
-import { GameComponent } from './games/game/game.component';
-import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './common/error.component';
-
 /* Import the miscellaneous files */
 import { MaterialModule } from './common/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SoftwaresComponent } from './softwares/softwares.component';
+
+/* Import the components files */
+import { AppComponent } from './app.component';
+import { GamesComponent } from './games/games.component';
+import { ItemComponent } from './common/item/item.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './common/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
     HomeComponent,
     GamesComponent,
-    ErrorComponent
+    ItemComponent,
+    ErrorComponent,
+    SoftwaresComponent,
   ],
   imports: [
     BrowserModule,

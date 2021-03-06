@@ -1,6 +1,15 @@
 mat-card[item] {
+  margin: 10px 0;
   img[matCardImage] {
+    margin: auto 0;
     width: 180px;
+  }
+  mat-card-actions {
+    a {
+      width: 100%;
+      // &[mat-button] {}
+      // &[mat-raised-button] {}
+    }
   }
 }
 

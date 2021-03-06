@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemComponent } from '../common/item/item.component';
 import { Router } from '@angular/router';
-import { GAMES } from '../games';
+import { SOFTWARES } from '../softwares';
 
 @Component({
-  selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss']
+  selector: 'app-softwares',
+  templateUrl: './softwares.component.html',
+  styleUrls: ['./softwares.component.scss']
 })
 
-export class GamesComponent implements OnInit {
+export class SoftwaresComponent implements OnInit {
 
   constructor(private router: Router) {
   }
-  gameList = GAMES;
+  gameList = SOFTWARES;
   pageTitle = 'Liste des jeux';
   arrowWay = 'upward';
   way = 'up';

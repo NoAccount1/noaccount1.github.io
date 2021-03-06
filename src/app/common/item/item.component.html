@@ -1,4 +1,4 @@
-<mat-card *ngIf="view === 'item'" item>
+<mat-card *ngIf="fullView === false" item>
   <img matCardImage src="{{mainGame.imgPath}}">
   <mat-card-header>
     <mat-card-title>{{mainGame.name}}</mat-card-title>
@@ -13,7 +13,7 @@
   </mat-card-actions>
 </mat-card>
 
-<mat-card *ngIf="view === 'full'" full>
+<mat-card *ngIf="fullView === true" full>
   <img matCardImage src="{{mainGame.imgPath}}">
   <mat-card-header>
     <mat-card-title>{{mainGame.name}}</mat-card-title>

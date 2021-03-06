@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GamesComponent } from './games/games.component';
 import { HomeComponent } from './home/home.component';
-import { GameComponent } from './games/game/game.component';
 import { ErrorComponent } from './common/error.component';
+
+import { GamesComponent } from './games/games.component';
+import { SoftwaresComponent } from './softwares/softwares.component';
+
+import { ItemComponent } from './common/item/item.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'games', component: GamesComponent },
-  { path: 'games/:game', component: GameComponent },
-  { path: 'softwares', component: null },
-  { path: 'softwares/:software', component: null },
+  { path: 'games/:game', component: ItemComponent },
+  { path: 'softwares', component: SoftwaresComponent },
+  { path: 'softwares/:software', component: ItemComponent },
   { path: 'error', component: ErrorComponent },
   { path: '**', redirectTo: '/error' }
 ];
