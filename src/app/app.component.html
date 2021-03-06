@@ -5,6 +5,7 @@
       <mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></mat-list-item>
       <a mat-list-item [routerLink]="['/']" (click)="sidenav.toggle()"> Accueil </a>
       <a mat-list-item [routerLink]="['/games']" (click)="sidenav.toggle()"> Jeux </a>
+      <a mat-list-item [routerLink]="['/softwares']" (click)="sidenav.toggle()"> Logiciels </a>
       <a mat-list-item href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank" (click)="sidenav.toggle()">Github repository</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -14,7 +15,8 @@
         <button mat-icon-button fxHide="true" fxShow.lt-sm><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
         <a mat-button [routerLink]="['/']" style="font-size: 20px;"><mat-icon>games</mat-icon> Cracked Games</a>
         <div fxHide.lt-sm>
-          <a mat-button [routerLink]="['/games']"> Jeux </a></div>
+          <a mat-button [routerLink]="['/games']"> Jeux </a>
+          <a mat-button [routerLink]="['/softwares']"> Logiciels </a></div>
 
         <span class="menu-spacer"></span>
         <a mat-icon-button href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank"> <i class="fab fa-github" style="color: white; font-size: 20px;"></i> </a>

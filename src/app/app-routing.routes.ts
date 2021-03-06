@@ -10,6 +10,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'games', component: GamesComponent },
   { path: 'games/:game', component: GameComponent },
+  { path: 'softwares', component: null },
+  { path: 'softwares/:software', component: null },
   { path: 'error', component: ErrorComponent },
   { path: '**', redirectTo: '/error' }
 ];
