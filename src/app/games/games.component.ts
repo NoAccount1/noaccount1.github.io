@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemComponent } from '../common/item/item.component';
 import { Router } from '@angular/router';
 import { GAMES } from '../games';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-games',
@@ -11,13 +12,22 @@ import { GAMES } from '../games';
 
 export class GamesComponent implements OnInit {
 
-  constructor(private router: Router) {
-  }
+  constructor(
+    private router: Router
+  ) {}
+
   gameList = GAMES;
   pageTitle = 'Liste des jeux';
   arrowWay = 'upward';
   way = 'up';
+  lowValue: number = 0;
+  highValue: number = 20;
 
+  public getPaginatorData(event: PageEvent): PageEvent {
+    this.lowValue = event.pageIndex * event.pageSize;
+    this.highValue = this.lowValue + event.pageSize;
+    return event;
+  }
   goto = (url: string) => {
     this.router.navigate(['/games', url]);
   }
@@ -45,5 +55,7 @@ export class GamesComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void { this.sort(); }
+  ngOnInit(): void {
+    this.sort();
+  }
 }

@@ -1,48 +1,103 @@
+@import '~@angular/material/theming';
+
 mat-sidenav-container {
   overflow: hidden;
 }
 
-.menu-spacer {
-  flex: 1 1 auto;
-}
+@mixin footer-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-/* @import '/src/app/theme.scss';
-
-header {
-  position: static;
-  mat-toolbar span {
-    overflow: hidden;
-    padding: 10px;
-    font-size: 18px;
-    &.title {
-      font-size: 20px;
+  footer {
+    .docs-footer-links a {
+      color: mat-color($primary, default-contrast);
     }
   }
 }
 
-main.container {
-  overflow: auto;
-  width: 95vh;
-  align-self: center;
 
-  ::-webkit-scrollbar {
-    width: 2px;
-    margin: 10px;
-  }
-  // ::-webkit-scrollbar-button { 2 }
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-  }
-  // ::-webkit-scrollbar-track-piece { 4 }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    width: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-  }
-  // ::-webkit-scrollbar-corner { 6 }
-  // ::-webkit-resizer { 7 }
+.docs-footer {
+  padding: 12px;
+  font-size: 12px;
 }
- */
+
+.docs-footer-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 8px;
+}
+
+.docs-footer-logo {
+  flex: 1;
+}
+
+.docs-footer-angular-logo {
+  height: 50px;
+}
+
+.docs-footer-version {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  .angular-material-logo {
+    height: 40px;
+    margin: 10px 0 10px 16px;
+  }
+  .version {
+    margin: 0 40px;
+  }
+}
+
+.docs-footer-copyright {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-width: 225px;
+  margin-top: 16px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    text-align: center;
+  }
+
+  @media (min-width: 885px) {
+    margin-top: 0;
+  }
+}
+
+.docs-footer-logo span {
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 40px;
+  vertical-align: bottom;
+
+  a {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 884px){
+  .docs-footer-list {
+    flex-direction: column;
+  }
+}

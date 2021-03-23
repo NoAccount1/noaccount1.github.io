@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterComponent, FooterModule } from './common/footer.component';
 
 @Component({
   selector: 'app-root',

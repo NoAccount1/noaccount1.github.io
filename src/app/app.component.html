@@ -1,30 +1,52 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZltT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 <mat-sidenav-container>
   <mat-sidenav #sidenav>
     <mat-nav-list style="width: 300px;">
       <mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></mat-list-item>
-      <a mat-list-item [routerLink]="['/']" (click)="sidenav.toggle()"> Accueil </a>
-      <a mat-list-item [routerLink]="['/games']" (click)="sidenav.toggle()"> Jeux </a>
-      <a mat-list-item [routerLink]="['/softwares']" (click)="sidenav.toggle()"> Logiciels </a>
+      <a mat-list-item routerLink="/" (click)="sidenav.toggle()"> Accueil </a>
+      <a mat-list-item routerLink="/games" (click)="sidenav.toggle()"> Jeux </a>
+      <a mat-list-item routerLink="/softwares" (click)="sidenav.toggle()"> Logiciels </a>
       <a mat-list-item href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank" (click)="sidenav.toggle()">Github repository</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <mat-toolbar-row>
+      <mat-toolbar-row class="mat-elevation-z6" style="position: relative; z-index: 0;">
         <button mat-icon-button fxHide="true" fxShow.lt-sm><mat-icon (click)="sidenav.toggle()">menu</mat-icon></button>
-        <a mat-button [routerLink]="['/']" style="font-size: 20px;"><mat-icon>games</mat-icon> Cracked Games</a>
+        <a mat-button routerLink="/" style="font-size: 20px;"><mat-icon>games</mat-icon> Cracked Games</a>
         <div fxHide.lt-sm>
-          <a mat-button [routerLink]="['/games']"> Jeux </a>
-          <a mat-button [routerLink]="['/softwares']"> Logiciels </a></div>
+          <a mat-button routerLink="/games"> Jeux </a>
+          <a mat-button routerLink="/softwares"> Logiciels </a></div>
 
-        <span class="menu-spacer"></span>
+        <span class="example-spacer"></span>
         <a mat-icon-button href="https://github.com/NoAccount1/noaccount1.github.io" target="_blank"> <i class="fab fa-github" style="color: white; font-size: 20px;"></i> </a>
 
+      </mat-toolbar-row>
+      <mat-toolbar-row style="font-weight: lighter;">
+        Jeux
       </mat-toolbar-row>
     </mat-toolbar>
     <div style="height: calc(100vh - 64px)">
       <router-outlet></router-outlet>
     </div>
+    <footer class="docs-footer">
+      <div class="docs-footer-list">
+        <div class="docs-footer-logo">
+          <div class="footer-logo">
+            <img class="docs-footer-angular-logo"
+              src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg"
+              alt="Angular icon">
+            <span><a href="https://angular.io">Learn Angular</a></span>
+          </div>
+        </div>
+
+        <div class="docs-footer-copyright">
+          <div>
+            <span>Powered by Google ©2010-2020.</span>
+            <a href="https://github.com/angular/components/blob/master/LICENSE">Code licensed under an MIT-style License.</a>
+            <span>Documentation licensed under CC BY 4.0.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

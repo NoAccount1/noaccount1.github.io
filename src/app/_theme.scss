@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+
+@import 'common/error/error.theme';
+
+// Define the light theme.
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Styles for the docs app that are based on the current theme.
+@mixin material-docs-app-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  .docs-footer {
+    background: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+
+  @include not-found-theme($theme)
+}

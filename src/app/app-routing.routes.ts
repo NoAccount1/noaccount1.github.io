@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './common/error.component';
+import { ErrorComponent } from './common/error/error.component';
 
 import { GamesComponent } from './games/games.component';
 import { SoftwaresComponent } from './softwares/softwares.component';
@@ -15,8 +15,7 @@ const routes: Routes = [
   { path: 'games/:game', component: ItemComponent },
   { path: 'softwares', component: SoftwaresComponent },
   { path: 'softwares/:software', component: ItemComponent },
-  { path: 'error', component: ErrorComponent },
-  { path: '**', redirectTo: '/error' }
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({

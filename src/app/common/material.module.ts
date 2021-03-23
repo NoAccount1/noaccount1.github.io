@@ -9,7 +9,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatBottomSheetModule,
+    MatTableModule,
+    MatSortModule
   ],
   exports: [
     MatButtonModule,
@@ -36,7 +42,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatBottomSheetModule,
+    MatTableModule,
+    MatSortModule
   ]
 })
 export class MaterialModule { }

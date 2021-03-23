@@ -19,6 +19,32 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    name: 'Ori and the Blind Forest - Definitive edition',
+    nameShort: 'Ori and the Blind Forest',
+    shortDesc: 'Un plateformer dans lequel vous incarnez un petit esprit sylvestre nommé Ori, dont la forêt dans laquelle il vit s\'est considérablement dégradée à la suite d\'évènements mystérieux.',
+    routeUrl: 'ori-blind-forest',
+    gameType: 'Plateformer',
+    megaUrl: 'https://mega.nz/file/zNtTzaIA#Jd5yikfLsYiVTwCZrqiHz6Tzof-BiV2ikbecbJKRGCo',
+    imgPath: 'assets/icons/ori-bf.png'
+  },
+  {
+    name: 'Absolute Drift - Zen Edition',
+    nameShort: 'Absolute Drift',
+    shortDesc: 'Un jeu de voiture basé sur le contrôle et la maitrise de la voiture',
+    routeUrl: 'absolute-drift',
+    megaUrl: 'https://mega.nz/file/vV93QIKa#mmaQDRhaGxJguYG5KkXd8WjTxPrWMdZY0SrznNx62-k',
+    imgPath: 'assets/icons/absolute-drift.png'
+  },
+  {
+    name: 'Bloons Tower Defense 6',
+    nameShort: 'Bloon TD 6',
+    shortDesc: 'Un tower defense de la série Bloons',
+    routeUrl: 'bloons-td6',
+    gameType: 'Tower defense',
+    megaUrl: 'https://mega.nz/file/Gck1FY6Q#_5IN6sbo4fU-Tzjjdo-Ec_vpJ0alvheOfhwkH6r1DEk',
+    imgPath: 'assets/icons/btd6.png'
+  },
+  {
     name: 'STAR WARS Battlefront I (classic 2004)',
     nameShort: 'Battlefront I',
     shortDesc: 'Le premier opus de STAR WARS Battlefront sortit en 2004',

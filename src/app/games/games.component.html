@@ -1,10 +1,20 @@
-<mat-paginator [length]="gameList.length" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-<button mat-raised-button color="primary" (click)="sort()">{{'Trier par nom' | uppercase}}<mat-icon class="mat-16">arrow_{{arrowWay}}</mat-icon> </button>
-<div games fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="32px"><!--  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="space-evenly none" -->
-    <a (click)="goto(mainGame.routeUrl)" *ngFor="let mainGame of gameList" fxFlex="25"><!--  fxFlex="25%" -->
-      <app-item
-        [mainGame]="mainGame"
-        [fullView]="false"
-      ></app-item>
-    </a>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-raised-button color="primary" (click)="sort()">{{'Trier par nom' | uppercase}}<mat-icon class="mat-16">arrow_{{arrowWay}}</mat-icon> </button>
+    <span class="example-spacer"></span>
+    <mat-paginator
+      [length]="gameList.length"
+      [pageSize]="15"
+      [pageSizeOptions]="[9, 15, 30, 60]"
+      (page)="getPaginatorData($event)"></mat-paginator>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px">
+    <app-item
+      *ngFor="let mainGame of (gameList | slice: lowValue : highValue)"
+      fxFlex="25"
+      [mainGame]="mainGame"
+      [fullView]="false"
+      [routerLink]="mainGame.routeUrl"
+    ></app-item>
 </div>
