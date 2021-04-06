@@ -20,8 +20,8 @@ export class GamesComponent implements OnInit {
   pageTitle = 'Liste des jeux';
   arrowWay = 'upward';
   way = 'up';
-  lowValue: number = 0;
-  highValue: number = 20;
+  lowValue = 0;
+  highValue = 20;
 
   public getPaginatorData(event: PageEvent): PageEvent {
     this.lowValue = event.pageIndex * event.pageSize;
