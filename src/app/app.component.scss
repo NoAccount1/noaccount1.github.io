@@ -1,3 +1,4 @@
+@import '../constants';
 @import '~@angular/material/theming';
 
 mat-sidenav-container {
@@ -100,4 +101,22 @@ a {
   .docs-footer-list {
     flex-direction: column;
   }
+}
+
+a[mat-button] {
+  text-decoration: none;
+  transition: $fadeSpeed ease-in-out;
+}
+
+a[mat-button]:hover {
+  background: $hoverColor;
+}
+
+a[mat-icon-button] {
+  text-decoration: none;
+  transition: $fadeSpeed ease-in-out;
+}
+
+a[mat-icon-button]:hover {
+  background-color: $hoverColor;
 }
