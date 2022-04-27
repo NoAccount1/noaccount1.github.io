@@ -1,0 +1,113 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$nav-height: 56px;
+
+nav#nav {
+  position: fixed;
+  top: 0;
+  background-color: rgb(0, 102, 255);
+  width: 100vw;
+  height: $nav-height;
+  display: flex;
+  $align-left: 16px;
+  #menuToggle {
+    i.material-icons {
+      z-index: 1000000;
+      font-size: 2rem;
+      color: white;
+      height: 32px;
+      width: 40px;
+      position: fixed;
+      left: $align-left;
+      top: 9px;
+      transition: 150ms ease-in-out;
+    }
+    i.material-icons.show {
+      color: black;
+      transform: rotate(180deg);
+    }
+    ul.show {
+      transform: none;
+    }
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    & a {
+      text-decoration: none;
+      color: #232323;
+      transition: color 0.3s ease;
+      &:hover {
+        color: tomato;
+      }
+    }
+    & input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: fixed;
+      top: 9px;
+      left: $align-left;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 10;
+      -webkit-touch-callout: none;
+    }
+  }
+
+  #menu {
+    z-index: 5;
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    & li {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+  }
+}
+
+#content {
+  margin-top: $nav-height;
+  padding: 10px;
+  // height: calc(100vh - $nav-height);
+  p { padding: 0; margin: 0; }
+}
+@media only screen and (max-width: 600px) {
+  #side-bar {
+    display: none;
+  }
+  #menuToggle input {
+    display: none !important;
+  }
+}
+
+a[nav-item], button[nav-item] {
+  margin: auto 15px
+}
+
+button {
+  padding: 5px;
+  transition: 200ms ease-in-out;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgba(0,0,0,.2);
+}
