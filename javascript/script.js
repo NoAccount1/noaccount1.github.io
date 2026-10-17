@@ -17,10 +17,10 @@ var settings2 = {
 };
 
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings).done((response) => {
   console.log(response);
   token = response.token
-  $.ajax(settings2).done(function (response) {
+  $.ajax(settings2).done((response) => {
     console.log(response);
   });
 });
