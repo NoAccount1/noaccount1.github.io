@@ -46,12 +46,15 @@
 		3px 21px,
 		0px 21px
 	);
+	--cubic-bezier: all 0.3s cubic-bezier(0.62, -0.33, 0.31, 1.44);
 }
 
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	margin: auto 20%;
 	background-color: rgb(255, 224, 224);
+
+	display: flex;
 }
 
 h1,
@@ -91,6 +94,40 @@ smol {
 	font-weight: 200;
 	font-style: italic;
 }
+.sidebar {
+	width: 64px;
+	
+	clip-path: var(--pixel-border);
+	padding: 20px;
+	margin: 10px;
+	background-color: rgb(255, 245, 245);
+}
+
+.sidebar-item {
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 10px;
+	/*
+	Source - https://stackoverflow.com/a/14068216
+	Posted by Vargr, modified by community. See post 'Timeline' for change history
+	Retrieved 2026-10-20, License - CC BY-SA 4.0
+	*/
+	img {
+		image-rendering: optimizeSpeed; 			/* STOP SMOOTHING, GIVE ME SPEED  */
+		image-rendering: -moz-crisp-edges; 			/* Firefox                        */
+		image-rendering: -o-crisp-edges; 			/* Opera                          */
+		image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+		image-rendering: pixelated; 				/* Universal support since 2021   */
+		image-rendering: optimize-contrast; 		/* CSS3 Proposed                  */
+		-ms-interpolation-mode: nearest-neighbor; 	/* IE8+                           */
+		
+		transition: var(--cubic-bezier);
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
 
 .content {
 	/* border: 1px red solid; */
@@ -102,7 +139,7 @@ smol {
 
 .icon {
 	height: 24px;
-  margin: 6px;
+	margin: 6px;
 }
 
 .float {
@@ -124,17 +161,17 @@ smol {
 
 	/* border: 1px gray solid; */
 	padding: 10px;
-  padding-left: 20px;
-  & h3 {
-    margin-left: -10px;
-  }
+	padding-left: 20px;
+	& h3 {
+		margin-left: -10px;
+	}
 	max-width: 330px;
 	min-width: 200px;
 	flex-grow: 1;
 
 	text-decoration: none;
 
-	transition: all 0.3s cubic-bezier(0.62, -0.33, 0.31, 1.44);
+	transition: var(--cubic-bezier);
 	color: rgb(70, 8, 8);
 	background-color: rgb(252, 162, 162);
 	&:hover {
@@ -157,12 +194,12 @@ smol {
 	&.blue {
 		background-color: #3477c5;
 	}
-  &.green {
-    background-color: #88df52;
-  }
-  &.pink {
-    background-color: #f34c7c;
-  }
+	&.green {
+		background-color: #88df52;
+	}
+	&.pink {
+		background-color: #f34c7c;
+	}
 }
 
 @media only screen and (max-width: 600px) {
